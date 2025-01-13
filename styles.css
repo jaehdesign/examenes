@@ -10,7 +10,7 @@
 :root {
     --color-primary: hsl(25, 97%, 53%);
     --color-white: hsl(0, 0%, 100%);
-    --color-ligth-grey: hsl(217, 12%, 63%);
+    --color-light-grey: hsl(217, 12%, 63%);
     --color-dark-blue: hsl(213, 19%, 18%);
     --color-very-dark-blue: hsl(216, 12%, 8%);
 }
@@ -22,6 +22,12 @@ body {
     background-color: var(--color-very-dark-blue);
 }
 
+h1 {
+    font-size: 2rem;
+    color: var(--color-white);
+    padding-block: 1rem;
+}
+
 main {
     display: flex;
     justify-content: center;
@@ -31,31 +37,59 @@ main {
 
 section.description {
     width: 375px;
-    background-color: var(--color-ligth-grey);
+    background-color: var(--color-light-grey);
     background: linear-gradient(
         90deg,
         var(--color-very-dark-blue) 0%,
         var(--color-dark-blue) 60%
     );
-    border: 1px solid var(--color-ligth-grey);
+    border: 1px solid var(--color-light-grey);
     padding: 2rem;
     border-radius: 20px;
+}
+
+section p {
+    font-size: 1.2rem;
+    line-height: 2rem;
+    color: var(--color-light-grey);
 }
 
 section div.star {
     width: 2rem;
     height: 2rem;
-    padding: 1.5rem;
-    margin-block-end: 1rem;
+    padding: 2rem;
+    margin-block-end: 0.5rem;
     display: flex;
     justify-content: center;
     align-items: center;
     border-radius: 50%;
     background-color: var(--color-dark-blue);
 }
+
+section.score ul {
+    padding-block: 2rem;
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+
+    & li {
+        display: flex;
+        justify-content: center;
+        font-weight: 700;
+        align-items: center;
+        width: 50px;
+        height: 50px;
+        padding: 1rem;
+        background-color: var(--color-dark-blue);
+        color: var(--color-light-grey);
+        font-size: 1.5rem;
+        border-radius: 50%;
+    }
+}
+
 /* Estilos para pantallas con un ancho máximo de 320px */
-@media (min-width: 320px) {
+@media (max-width: 320px) {
     section.description {
-        width: 375px;
+        width: 320px;
     }
 }
