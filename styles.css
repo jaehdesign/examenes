@@ -7,8 +7,55 @@
     overflow-wrap: break-word;
 }
 
+:root {
+    --color-primary: hsl(25, 97%, 53%);
+    --color-white: hsl(0, 0%, 100%);
+    --color-ligth-grey: hsl(217, 12%, 63%);
+    --color-dark-blue: hsl(213, 19%, 18%);
+    --color-very-dark-blue: hsl(216, 12%, 8%);
+}
+
 body {
     line-height: 1.5;
     font-family: "Overpass", serif;
     min-height: 100vh;
+    background-color: var(--color-very-dark-blue);
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+section.description {
+    width: 375px;
+    background-color: var(--color-ligth-grey);
+    background: linear-gradient(
+        90deg,
+        var(--color-very-dark-blue) 0%,
+        var(--color-dark-blue) 60%
+    );
+    border: 1px solid var(--color-ligth-grey);
+    padding: 2rem;
+    border-radius: 20px;
+}
+
+section div.star {
+    width: 2rem;
+    height: 2rem;
+    padding: 1.5rem;
+    margin-block-end: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    background-color: var(--color-dark-blue);
+}
+/* Estilos para pantallas con un ancho máximo de 320px */
+@media (min-width: 320px) {
+    section.description {
+        width: 375px;
+    }
 }
