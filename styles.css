@@ -35,6 +35,14 @@ main {
     height: 100vh;
 }
 
+div.orderStart {
+    display: block;
+}
+
+div.orderFinal {
+    display: none;
+}
+
 section.description,
 section.congratulations {
     width: 375px;
@@ -50,7 +58,7 @@ section.congratulations {
 }
 
 .congratulations {
-    display: none;
+    display: block;
     text-align: center;
 }
 
@@ -97,10 +105,11 @@ section.score ul {
     li:active {
         background-color: var(--color-white);
         color: var(--color-very-dark-blue);
+        cursor: pointer;
     }
 }
 
-button {
+.btnunabled {
     width: 100%;
     padding: 1.5rem;
     color: var(--color-dark-blue);
@@ -109,6 +118,19 @@ button {
     border: none;
     font-size: 1.2rem;
     font-weight: 700;
+}
+
+.btndisabled {
+    width: 100%;
+    padding: 1.5rem;
+    background-color: var(--color-light-grey);
+    border-radius: 30px;
+    border: none;
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: var(--color-dark-blue);
+    cursor: not-allowed;
+    opacity: 0.3;
 }
 
 /* Estilos para pantallas con un ancho máximo de 320px */
